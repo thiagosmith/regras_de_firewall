@@ -1,6 +1,6 @@
 # Procedimento Para Executar o Teste de bypass de Firewall com nmap
 
-## Baixar o repositório no Kali Linux
+## Baixar o Repositório no Kali Linux
 
 ```
 $ git clone https://github.com/thiagosmith/regras_de_firewall.git
@@ -14,7 +14,7 @@ $ ls
 limpa_regra.sh  REAMDE.md  regra_firewall.sh
 ```
 
-## Enviar os arquivos do Kali Linux para o Metasploitable
+## Enviar os Arquivos do Kali Linux para o Metasploitable
 
 ```
 $ scp -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa limpa_regra.sh msfadmin@192.168.80.129:/home/msfadmin/
@@ -34,7 +34,7 @@ $ ls
 limpa_regra.sh  regra_firewall.sh
 ```
 
-## Atribuir permissão de Execução(X) aos Arquivos no Metasploitable
+## Atribuir Permissão de Execução(X) aos Arquivos no Metasploitable
 
 ```
 msfadmin@metasploitable:~$ chmod +x limpa_regra.sh
@@ -54,7 +54,7 @@ root@metasploitable:/home/msfadmin# ./regra_firewall.sh
 net.ipv4.ip_forward = 1
 ```
 
-# Executando Scan com o Firewall Bloqueando as Demais Portas
+# Executando Scan com o Firewall Bloqueando as Demais Portas, sendo exibida apenas as portas 22 e 80
 
 ```
 $ nmap 192.168.80.129
@@ -68,7 +68,7 @@ PORT   STATE SERVICE
 MAC Address: 00:0C:29:50:66:05 (VMware)
 ```
 
-# Executando Scan Passando a porta de origem como sendo a porta 53
+# Executando Scan Passando a porta de origem como sendo a 53
 
 ```
 $ nmap 192.168.80.129 -g53
